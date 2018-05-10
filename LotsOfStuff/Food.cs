@@ -1,7 +1,7 @@
 ﻿namespace Aula11
 {
     /// <summary>Classe que define um pedaço de comida</summary>
-    public class Food : IStuff
+    public class Food : ItemWithKarma, IStuff
     {
         /// <summary>Dias que a comida tem (variável de instância)</summary>
         private float days;
@@ -48,7 +48,8 @@
         public override string ToString()
         {
             return $"{Type} tem {days} dias, pesa {Weight:f2} Kg e " +
-                $"custa {Value:c2}";
+                $"custa {Value:c2} " +
+                $"({Karma} Karma).";
         }
     }
 }
