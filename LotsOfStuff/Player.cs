@@ -6,6 +6,14 @@ namespace Aula11
     public class Player : IHasWeight
     {
 
+
+        public float Karma
+        {
+            get
+            {
+                return BagOfStuff.Karma;
+            }
+        }
         /// <summary>
         /// Máximo de items na mochila (variável de classe, constante,
         /// implicitamente static)
@@ -49,7 +57,8 @@ namespace Aula11
 
             return $"Peso total: {Weight:f2} KG \n" +
                 $"Numero de itens: {BagOfStuff.Count} \n" +
-                $"Percentagem de peso: {(BagOfStuff.Weight/Weight):p2}" ;
+                $"Percentagem de peso: {(BagOfStuff.Weight/Weight):p2} \n" +
+                $"Karma do Player: {Karma}" ;
         }
     }
 }
