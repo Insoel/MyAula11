@@ -20,6 +20,8 @@
         /// </summary>
         public Bag BagOfStuff { get; }
 
+        
+
         /// <summary>
         /// Propriedade Weight respeita o contrato com IHasWeight
         /// </summary>
@@ -37,6 +39,7 @@
         {
             this.baseWeight = baseWeight;
             BagOfStuff = new Bag(maxBagItems);
+            
         }
     }
 }
