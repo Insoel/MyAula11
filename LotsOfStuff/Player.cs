@@ -1,4 +1,6 @@
-﻿namespace Aula11
+﻿using System;
+
+namespace Aula11
 {
     /// <summary>Esta classe representa um jogador num jogo</summary>
     public class Player : IHasWeight
@@ -29,7 +31,7 @@
             get
             {
                 // Seria porreiro adicionar o peso de todas as coisas no saco
-                return baseWeight;
+                return baseWeight + BagOfStuff.Weight;
             }
         }
 
@@ -40,6 +42,14 @@
             this.baseWeight = baseWeight;
             BagOfStuff = new Bag(maxBagItems);
             
+        }
+
+        public override string ToString()
+        {
+
+            return $"Peso total: ´{Weight}" +
+                $"Numero de itens: {BagOfStuff} " +
+                $"Percentagem de peso: {(BagOfStuff.Weight/Weight)*100}" ;
         }
     }
 }

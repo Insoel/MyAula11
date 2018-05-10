@@ -50,6 +50,7 @@ namespace Aula11
 
             // Mostrar informação acerca dos conteúdos da mochila
             Console.WriteLine(p.BagOfStuff);
+            Console.WriteLine(p);
 
             // Percorrer itens na mochila e tentar "imprimir" cada um
             foreach (IStuff aThing in p.BagOfStuff)
@@ -65,6 +66,7 @@ namespace Aula11
 
             // Mostrar de novo informação sobre a mochila
             Console.WriteLine(p.BagOfStuff);
+            Console.WriteLine(p);
         }
     }
 }
