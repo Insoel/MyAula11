@@ -47,9 +47,9 @@ namespace Aula11
         public override string ToString()
         {
 
-            return $"Peso total: ´{Weight}" +
-                $"Numero de itens: {BagOfStuff} " +
-                $"Percentagem de peso: {(BagOfStuff.Weight/Weight)*100}" ;
+            return $"Peso total: {Weight:f2} KG \n" +
+                $"Numero de itens: {BagOfStuff.Count} \n" +
+                $"Percentagem de peso: {(BagOfStuff.Weight/Weight):p2}" ;
         }
     }
 }
